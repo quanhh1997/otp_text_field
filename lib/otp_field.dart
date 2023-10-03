@@ -228,11 +228,11 @@ class _OTPTextFieldState extends State<OTPTextField> {
 
           // Check if the current value at this position is empty
           // If it is move focus to previous text field.
-          // if (str.isEmpty) {
-          //   if (index == 0) return;
-          //   _focusNodes[index]!.unfocus();
-          //   _focusNodes[index - 1]!.requestFocus();
-          // }
+          if (str.isEmpty) {
+            if (index == 0) return;
+            _focusNodes[index]!.unfocus();
+            _focusNodes[index - 1]!.requestFocus();
+          }
 
           // Update the current pin
           setState(() {
